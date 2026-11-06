@@ -10,7 +10,14 @@ import re
 import threading
 import time
 from zoneinfo import ZoneInfo
-
+# Masukkan kode CSS ini di sini:
+st.markdown("""
+<style>
+/* Menyembunyikan footer Hosted with Streamlit */
+footer {visibility: hidden !important;}
+.viewerBadge_container__1QSob {display: none !important;}
+</style>
+""", unsafe_allow_html=True)
 # ---------------------------------------------------------
 # TELEGRAM BOT CONFIGURATION
 # ---------------------------------------------------------
@@ -1364,11 +1371,4 @@ else:
             else:
                 st.info("Belum ada catatan tersimpan. Buat catatan baru di sebelah kiri!")
             st.markdown('</div>', unsafe_allow_html=True)
-            hide_footer_style = """
-<style>
-/* Menyembunyikan footer Hosted with Streamlit */
-footer {visibility: hidden !important;}
-.viewerBadge_container__1QSob {display: none !important;}
-</style>
-"""
-st.markdown(hide_footer_style, unsafe_allow_html=True)
+
